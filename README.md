@@ -7,9 +7,28 @@ conversation format. Built on
 implementation, v1 core). Part of the `curt-*` converter family (`curt-convert`
 for Claude Code, `curt-wildchat` for WildChat-1M).
 
-**Ecosystem note:** the OpenClaw docs recommend exporting sessions for
-portability — this converter *is* that export: a local, read-only pass over
-the file store that produces portable `.curt` files.
+**Upstream context:** OpenClaw ships a built-in export — `/export-session`
+(alias `/export`), added in v2026.2.17 ([PR
+#18010](https://github.com/openclaw/openclaw/pull/18010)): an owner-only,
+in-chat slash command that writes one self-contained HTML transcript into
+the workspace, with machine-readable JSONL available via a download button
+inside that file (source:
+`src/auto-reply/reply/commands-export-session.ts`; docs:
+[docs.openclaw.ai/tools/slash-commands](https://docs.openclaw.ai/tools/slash-commands)).
+There is no `sessions export` CLI subcommand.
+
+This converter fills a different slice of that space: CLI/bulk export across
+*all* sessions of an agent in one read-only pass, direct machine-readable
+`.curt` output (not a button inside an HTML file), cross-agent operation for
+headless multi-agent hosts, identifier redaction by design (counted,
+aggregate-only — see Known losses), and a spec'd portable format (`.curt`
+v1) that other tools read.
+
+One docs observation, stated plainly: the session docs' disk-budget advice —
+"exporting and deleting unneeded sessions" — doesn't link `/export-session`,
+and no CLI export implements it; upstream issue
+[openclaw/openclaw#190620](https://github.com/openclaw/openclaw/issues/190620)
+tracks the CLI gap.
 
 ```sh
 npm install -g curt-openclaw   # or: npx curt-openclaw
