@@ -1,0 +1,53 @@
+{
+	"curt": "curtis-conversation",
+	"version": 1,
+	"conversation": {
+		"id": "33333333-3333-4333-8333-333333333333",
+		"title": "Orphan transcript with no index entry.",
+		"createdAt": 1735896000000,
+		"updatedAt": 1735896001000,
+		"messages": [
+			{
+				"id": "33333333-3333-4333-8333-333333333333-1",
+				"role": "user",
+				"content": "Orphan transcript with no index entry.",
+				"timestamp": 1735896000000
+			},
+			{
+				"id": "33333333-3333-4333-8333-333333333333-2",
+				"role": "assistant",
+				"content": "Answering anyway.",
+				"timestamp": 1735896001000,
+				"model": "test-model-fallback",
+				"usage": {
+					"input": 1,
+					"output": 1,
+					"cacheRead": 0,
+					"cacheWrite": 0,
+					"totalTokens": 2,
+					"cost": {
+						"input": 0,
+						"output": 0,
+						"total": 0
+					}
+				},
+				"tokens": {
+					"input": 1,
+					"output": 1,
+					"cacheRead": 0,
+					"cacheWrite": 0,
+					"totalTokens": 2
+				},
+				"cost": 0,
+				"provider": "fallbackprov",
+				"stopReason": "stop"
+			}
+		],
+		"provider": "fallbackprov",
+		"model": "test-model-changed"
+	},
+	"generator": "curt-openclaw@1.0.0",
+	"extensions": [
+		"usage-metadata"
+	]
+}

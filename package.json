@@ -1,0 +1,37 @@
+{
+	"name": "curt-openclaw",
+	"version": "1.0.0",
+	"description": "Convert OpenClaw gateway session transcripts to .curt conversation files",
+	"license": "MIT",
+	"type": "module",
+	"engines": {
+		"node": ">=18"
+	},
+	"bin": {
+		"curt-openclaw": "dist/cli.js"
+	},
+	"main": "dist/openclaw.js",
+	"types": "dist/openclaw.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"test": "vitest run",
+		"prepack": "npm run build"
+	},
+	"dependencies": {
+		"curt-format": "^1.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.19.2",
+		"typescript": "^5.9.3",
+		"vitest": "^3.2.7"
+	},
+	"keywords": [
+		"curt",
+		"openclaw",
+		"converter",
+		"transcript"
+	]
+}

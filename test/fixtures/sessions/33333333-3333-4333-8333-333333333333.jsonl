@@ -1,0 +1,4 @@
+{"type":"session","version":3,"id":"33333333-3333-4333-8333-333333333333","timestamp":"2026-01-03T12:00:00.000Z","cwd":"C:\\synthetic"}
+{"type":"message","id":"o1","parentId":null,"timestamp":1735896000000,"message":{"role":"user","content":"Orphan transcript with no index entry.","timestamp":1735896000000}}
+{"type":"message","id":"o2","parentId":"o1","timestamp":1735896001000,"message":{"role":"assistant","content":[{"type":"text","text":"Answering anyway."}],"provider":"fallbackprov","model":"test-model-fallback","usage":{"input":1,"output":1,"cacheRead":0,"cacheWrite":0,"totalTokens":2,"cost":{"input":0,"output":0,"total":0}},"stopReason":"stop","timestamp":1735896001000}}
+{"type":"model_change","id":"omc1","parentId":"o2","provider":"fallbackprov","modelId":"test-model-changed","timestamp":1735896001500}
